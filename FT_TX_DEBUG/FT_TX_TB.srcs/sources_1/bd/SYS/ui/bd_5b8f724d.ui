@@ -1,0 +1,26 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port FT601Q -pg 1 -lvl 2 -x 280 -y 110 -defaultsOSRD
+preplace port ft_ready -pg 1 -lvl 2 -x 280 -y 130 -defaultsOSRD
+preplace port ft_start -pg 1 -lvl 2 -x 280 -y 150 -defaultsOSRD
+preplace port nrst -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port wr_full -pg 1 -lvl 2 -x 280 -y 20 -defaultsOSRD
+preplace port wr_en -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port wr_clk -pg 1 -lvl 2 -x 280 -y 240 -defaultsOSRD
+preplace portBus wr_data -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace inst ft_tx_0 -pg 1 -lvl 1 -x 140 -y 130 -defaultsOSRD
+preplace netloc ft_tx_0_ft_ready 1 1 1 NJ 130
+preplace netloc ft_tx_0_ft_start 1 1 1 NJ 150
+preplace netloc nrst_0_1 1 0 1 NJ 180
+preplace netloc ft_tx_0_wr_full 1 0 2 20 20 NJ
+preplace netloc wr_data_0_1 1 0 1 NJ 120
+preplace netloc wr_en_0_1 1 0 1 NJ 140
+preplace netloc ft_tx_0_wr_clk 1 0 2 20 240 NJ
+preplace netloc ft_tx_0_FT 1 1 1 NJ 110
+levelinfo -pg 1 0 140 280
+pagesize -pg 1 -db -bbox -sgen -140 0 390 260
+"
+}
+

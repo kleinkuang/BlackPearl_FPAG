@@ -1,0 +1,65 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port MCU_CLK -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace port rs232_uart -pg 1 -lvl 8 -x 2350 -y 70 -defaultsOSRD
+preplace port iic_rtl -pg 1 -lvl 8 -x 2350 -y 200 -defaultsOSRD
+preplace port MCU_RST -pg 1 -lvl 0 -x 0 -y 550 -defaultsOSRD
+preplace portBus sys_rst_ext -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
+preplace portBus sys_nrst -pg 1 -lvl 8 -x 2350 -y 770 -defaultsOSRD
+preplace portBus sys_mode -pg 1 -lvl 8 -x 2350 -y 260 -defaultsOSRD
+preplace portBus sys_delay -pg 1 -lvl 8 -x 2350 -y 660 -defaultsOSRD
+preplace portBus F_AVDD_EN -pg 1 -lvl 8 -x 2350 -y 360 -defaultsOSRD
+preplace portBus F_VDD1_EN -pg 1 -lvl 8 -x 2350 -y 460 -defaultsOSRD
+preplace portBus F_VDD2_EN -pg 1 -lvl 8 -x 2350 -y 560 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 130 -y 540 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 2 -x 430 -y 450 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 3 -x 860 -y 450 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 430 -y 630 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 4 -x 1280 -y 460 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 5 -x 1590 -y 80 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 4 -x 1280 -y 200 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 5 -x 1590 -y 220 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 5 -x 1590 -y 630 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 7 -x 2180 -y 770 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 6 -x 1880 -y 780 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 6 -x 1880 -y 600 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 7 -x 2180 -y 260 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 7 -x 2180 -y 360 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 7 -x 2180 -y 460 -defaultsOSRD
+preplace inst xlslice_4 -pg 1 -lvl 7 -x 2180 -y 560 -defaultsOSRD
+preplace inst xlslice_5 -pg 1 -lvl 7 -x 2180 -y 660 -defaultsOSRD
+preplace netloc microblaze_0_Clk 1 1 4 250 520 610 540 1110 360 1440
+preplace netloc clk_wiz_1_locked 1 1 1 240 550n
+preplace netloc mdm_1_debug_sys_rst 1 1 2 260 530 600
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 1 620 480n
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 2 NJ 610 1130
+preplace netloc reset_1 1 0 2 20 610 NJ
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 3 NJ 670 1120 370 1450
+preplace netloc Op1_0_1 1 0 6 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ
+preplace netloc util_vector_logic_1_Res 1 6 1 NJ 780
+preplace netloc util_vector_logic_0_Res 1 7 1 NJ 770
+preplace netloc axi_gpio_0_gpio_io_o 1 5 2 1730 540 2030
+preplace netloc xlslice_0_Dout 1 6 1 2030 600n
+preplace netloc xlslice_1_Dout 1 7 1 NJ 260
+preplace netloc axi_gpio_0_gpio2_io_o 1 5 2 NJ 660 NJ
+preplace netloc xlslice_5_Dout 1 7 1 NJ 660
+preplace netloc xlslice_2_Dout 1 7 1 NJ 360
+preplace netloc xlslice_3_Dout 1 7 1 NJ 460
+preplace netloc xlslice_4_Dout 1 7 1 NJ 560
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 4 1 1430 220n
+preplace netloc Conn2 1 5 3 NJ 200 NJ 200 NJ
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 4 1 N 200
+preplace netloc microblaze_0_ilmb_1 1 3 1 N 450
+preplace netloc microblaze_0_dlmb_1 1 3 1 N 430
+preplace netloc microblaze_0_debug 1 2 1 N 440
+preplace netloc default_250mhz_clk1_2 1 0 1 NJ 530
+preplace netloc microblaze_0_M_AXI_DP 1 3 1 1100 100n
+preplace netloc Conn1 1 5 3 NJ 70 NJ 70 NJ
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 4 1 1430 60n
+levelinfo -pg 1 0 130 430 860 1280 1590 1880 2180 2350
+pagesize -pg 1 -db -bbox -sgen -150 0 2520 840
+"
+}
+0

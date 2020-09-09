@@ -1,0 +1,119 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xFD42823D8C355153",
+      "device": "xcvu9p-flga2104-2L-e",
+      "name": "SYS",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ft_tx_0": ""
+    },
+    "interface_ports": {
+      "FT601Q": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:user:FT601Q_rtl:1.0"
+      }
+    },
+    "ports": {
+      "ft_ready": {
+        "direction": "O"
+      },
+      "ft_start": {
+        "direction": "O"
+      },
+      "nrst": {
+        "direction": "I"
+      },
+      "wr_full": {
+        "direction": "O"
+      },
+      "wr_data": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "wr_en": {
+        "direction": "I"
+      },
+      "wr_clk": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "ft_tx_0": {
+        "vlnv": "xilinx.com:user:ft_tx:1.0",
+        "xci_name": "SYS_ft_tx_0_0"
+      }
+    },
+    "interface_nets": {
+      "ft_tx_0_FT": {
+        "interface_ports": [
+          "FT601Q",
+          "ft_tx_0/FT"
+        ]
+      }
+    },
+    "nets": {
+      "ft_tx_0_ft_ready": {
+        "ports": [
+          "ft_tx_0/ft_ready",
+          "ft_ready"
+        ]
+      },
+      "ft_tx_0_ft_start": {
+        "ports": [
+          "ft_tx_0/ft_start",
+          "ft_start"
+        ]
+      },
+      "nrst_0_1": {
+        "ports": [
+          "nrst",
+          "ft_tx_0/nrst"
+        ]
+      },
+      "ft_tx_0_wr_full": {
+        "ports": [
+          "ft_tx_0/wr_full",
+          "wr_full"
+        ]
+      },
+      "wr_data_0_1": {
+        "ports": [
+          "wr_data",
+          "ft_tx_0/wr_data"
+        ]
+      },
+      "wr_en_0_1": {
+        "ports": [
+          "wr_en",
+          "ft_tx_0/wr_en"
+        ]
+      },
+      "ft_tx_0_wr_clk": {
+        "ports": [
+          "ft_tx_0/wr_clk",
+          "wr_clk"
+        ]
+      }
+    }
+  }
+}

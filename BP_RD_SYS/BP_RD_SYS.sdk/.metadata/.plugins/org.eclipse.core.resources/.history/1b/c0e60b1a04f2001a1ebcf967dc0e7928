@@ -1,0 +1,51 @@
+// File:    gpio.c
+// Author:  Lei Kuang
+// Date:    13th April 2020
+// @ Imperial College London
+
+#include "gpio.h"
+
+XGpio Gpio;
+
+void GPIO_init()
+{
+	XGpio_Initialize(&Gpio, XPAR_GPIO_0_DEVICE_ID);
+	XGpio_SetDataDirection(&Gpio, 1, 0x00);
+	XGpio_SetDataDirection(&Gpio, 2, 0x00);
+	Set_GPIO(0);
+	Set_Delay(0);
+}
+
+uint8_t Get_GPIO()
+{
+	return XGpio_DiscreteRead(&Gpio, 1) & 0xFF;
+}
+
+void Set_GPIO(uint8_t mask)
+{
+	XGpio_DiscreteWrite(&Gpio, 1, mask);
+}
+
+uint8_t Get_GPIO_Bit(uint8_t pos)
+{
+	return (Get_GPIO() >> pos) & 0x1;
+}
+
+void Set_GPIO_Bit(uint8_t pos, uint8_t val)
+{
+	val = val & 0x1;
+	uint32_t mask = 1 << pos;
+	uint8_t  data = Get_GPIO();
+	data = (data & (~mask)) | (val << pos);
+	Set_GPIO(data);
+}
+
+void Set_Delay (uint8_t val)
+{
+	XGpio_DiscreteWrite(&Gpio, 2, val);
+}
+
+uint8_t Get_Delay()
+{
+    return XGpio_DiscreteRead(&Gpio, 1) & 0xFF;
+}

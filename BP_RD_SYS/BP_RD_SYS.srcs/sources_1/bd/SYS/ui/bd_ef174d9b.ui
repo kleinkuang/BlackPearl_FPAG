@@ -1,0 +1,25 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR4_CLK -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port DDR4_C0 -pg 1 -lvl 3 -x 690 -y 50 -defaultsOSRD
+preplace port C0_DDR4_S_AXI -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port sys_rst -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port ddr4_ui_clk -pg 1 -lvl 3 -x 690 -y 130 -defaultsOSRD
+preplace port ddr4_ready -pg 1 -lvl 3 -x 690 -y 70 -defaultsOSRD
+preplace inst ddr4_0 -pg 1 -lvl 2 -x 500 -y 110 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 170 -y 160 -defaultsOSRD
+preplace netloc ddr4_0_c0_ddr4_ui_clk_sync_rst 1 0 3 20 230 NJ 230 670
+preplace netloc util_vector_logic_0_Res 1 1 1 320J 120n
+preplace netloc ddr4_0_c0_init_calib_complete 1 2 1 NJ 70
+preplace netloc ddr4_0_c0_ddr4_ui_clk 1 2 1 NJ 130
+preplace netloc rb_piso_0_ddr4_rst 1 0 2 NJ 220 330J
+preplace netloc default_250mhz_clk1_1 1 0 2 NJ 80 NJ
+preplace netloc ddr4_0_C0_DDR4 1 2 1 NJ 50
+preplace netloc rb_piso_0_M_AXI 1 0 2 NJ 100 NJ
+levelinfo -pg 1 0 170 500 690
+pagesize -pg 1 -db -bbox -sgen -170 -10 890 240
+"
+}
+

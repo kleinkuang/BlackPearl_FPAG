@@ -1,0 +1,12 @@
+// File:    si5340.h
+// Author:  Lei Kuang
+// Date:    2019.11.18
+// @ Imperial College London
+
+#include "i2c.h"
+
+uint32_t Si5340_1MHz_Init();
+uint32_t Si5340_10MHz_Init();
+uint32_t Si5340_50MHz_Init();
+uint32_t Si5340_100MHz_Init();
+uint32_t Si5340_200MHz_Init();

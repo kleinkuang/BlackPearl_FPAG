@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>SYS_ft_tx_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>DATA_IN</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="user" spirit:name="FT_WR" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="user" spirit:name="FT_WR_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>wr_full</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>wr_full</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>wr_data</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>wr_data</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>wr_en</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>wr_en</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>wr_clk</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>wr_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>FT</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="user" spirit:name="FT601Q" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="user" spirit:name="FT601Q_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_SIWU_N</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_SIWU_N</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_CLK</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_NRST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_NRST</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_TXE_N</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_TXE_N</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_RXF_N</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_RXF_N</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_WR_N</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_WR_N</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_RD_N</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_RD_N</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_OE_N</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_OE_N</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_BE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_BE</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>FT_DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_DATA</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>FT_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>FT_CLK</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FT_CLK.ASSOCIATED_BUSIF">FT</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.FT_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.FT_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.FT_CLK.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.FT_CLK.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.FT_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>wr_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>wr_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.WR_CLK.ASSOCIATED_BUSIF">DATA_IN</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.WR_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.WR_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.WR_CLK.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.WR_CLK.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.WR_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>nrst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ft_ready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ft_start</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>wr_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>wr_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>wr_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>wr_full</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_CLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_NRST</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_TXE_N</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_RXF_N</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_WR_N</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_RD_N</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_OE_N</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_BE</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_DATA</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>FT_SIWU_N</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:description>ft_tx_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">SYS_ft_tx_0_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>ft_tx_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:xpmLibraries>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
+      </xilinx:xpmLibraries>
+      <xilinx:coreRevision>17</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@248b6906_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6313c674_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@784e275c_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a8db23c_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7acda35f_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31a58348_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45cd2eb6_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17c5a17b_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a63b6dc_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ad3c908_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f053d43_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@298706f6_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2041db6c_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cef26c8_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5db40f51_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@be04f86_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74c2affd_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@719af028_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1acbc969_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a1b5018_ARCHIVE_LOCATION">f:/bp_proj/ft_tx/ft_tx.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e9924e_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6daee72c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b91e0ae_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@722bb9ea_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@344f9e22_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f5d5a8c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@549ed0aa_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6936a7bf_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51775e84_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77436d36_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17ae1d6_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b46c7e2_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d65cc94_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a151bc_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33c637d5_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@623e38a7_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6348897c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18075769_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@263639f1_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@356f4575_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f404799_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a10c31_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e7c0f1e_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@257a44d_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dcfe014_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@682846ba_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30b79d6c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2784c4fe_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d6a3c46_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2de2f10_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1575e34a_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fbb5431_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@355d8028_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36e09cd0_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e0bc992_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a85800d_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ab58417_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29ce9c16_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@577145ba_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68bba1ed_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f2a5aa6_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bf0c99c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3711fe4_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@775b522e_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc40a4_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71a77ac5_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@720af4d7_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40ef20c6_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@676240f9_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@116b32df_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24e25972_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@92f6006_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49427ddc_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f5ca7e0_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@642366d_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e35612e_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d63f332_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@647021ea_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@198c36c5_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e43e08e_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e40f2f2_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bc172df_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55a21113_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75083bc5_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cd744ea_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41ec2ff0_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@547fafd3_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4920b02c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73f1ff64_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cb0dc97_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56b545a2_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39febaa_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3812b4e8_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e80647_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e74118b_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@483853d_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@224e66e8_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d52b132_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47025078_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e40471f_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a3a98fd_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fc71353_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e7e9f04_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cb632de_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66db5284_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5946722d_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76cb2719_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29f2646b_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@83e9512_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21cdc125_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@535559d2_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@639d6211_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a3116c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@508c687_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@703b46fd_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40adfdde_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c4f1760_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67832cd6_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b980520_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16a87b17_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@463172df_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@300446a8_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dd71682_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@750f9dc0_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@321d5abc_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7507ca00_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d234ddb_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7def2655_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4deeb017_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67750ea2_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45da46b7_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e0f1212_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@775f12d9_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52776659_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc67de9_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bffc6f_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e2c7a45_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37913aa8_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d6259c7_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7de464dd_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62400c35_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7df595bc_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c02c143_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@171a69de_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bd15c85_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4944d9d5_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b70a398_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3097deae_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b8af893_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6924d11c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2782e520_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54aa2bbc_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@231348cf_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fdefa4a_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fe96d3b_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e67639_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@204ccd4e_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@382baf58_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d3f8c5a_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4943e579_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44ee8a10_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ebb44ff_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f617a29_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5939c7b2_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aa0b93c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7104bc77_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55ede31a_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c4f885d_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@569be5e2_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b093f34_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a9f675e_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cf4d2e1_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10725885_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c44ce40_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@964ff0c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d964f59_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16f35b6c_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78f5f3d1_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5af3efe7_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40b42c3b_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39feda96_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b8eedb0_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cb02b94_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@482535b_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@158d91e1_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@263414b7_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c86fe23_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5132e7d2_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6af148be_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@248ad96a_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ad8426_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dd86651_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3353a7b1_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66c35c19_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@118f3f8a_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e9ff015_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59428514_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f994230_ARCHIVE_LOCATION">f:/BP_PROJ/FT_TX/FT_TX.srcs/sources_1</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f9faf198"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5376c462"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="8e16b03a"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="deb7fe00"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

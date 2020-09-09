@@ -1,0 +1,43 @@
+$date
+        2020-Aug-25 20:19:43
+$end
+$version
+        Vivado v2019.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " SYS_i/rb_piso_0/inst/p0/rd_empty $end
+$var reg 1 # SYS_i/rb_piso_0/inst/p0/rd_en $end
+$var reg 5 $ SYS_i/rb_piso_0/inst/p0/wr_index [4:0] $end
+$var reg 1 ) SYS_i/rb_piso_0/inst/p0/wr_valid $end
+$var reg 1 * SYS_i/rb_piso_0/inst/p0/wr_en $end
+$var reg 1 + SYS_i/rb_piso_0/inst/p0/wr_end $end
+$var reg 32 , SYS_i/rb_piso_0/inst/p0/wr_data [31:0] $end
+$var reg 1 L SYS_i/rb_piso_0/inst/p0/wr_full $end
+$var reg 8 M SYS_i/rb_piso_0/inst/p0/data_debug [7:0] $end
+$var reg 1 U SYS_i/rb_piso_0/inst/p0/data_error $end
+$var reg 1 V _TRIGGER $end
+$var reg 1 W _WINDOW $end
+$var reg 1 X _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+0#
+b1 $
+1)
+0*
+0+
+b111000001100000010100000100 ,
+1L
+b100 M
+0U
+0V
+1W
+0X
+$end
+#512
+1V

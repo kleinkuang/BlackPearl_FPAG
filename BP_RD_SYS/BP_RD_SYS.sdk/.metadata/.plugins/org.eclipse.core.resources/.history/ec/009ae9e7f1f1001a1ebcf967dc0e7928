@@ -1,0 +1,108 @@
+// File:    dac_adc.c
+// Author:  Lei Kuang
+// Date:    13th April 2020
+// @ Imperial College London
+
+#include "dac_adc.h"
+
+// Vg_rst 	660mV	C 0x2	541
+// Vy		1200mV	E 0x4	983
+// Vcm_iv	800mV	H 0x7	655
+// Vcm_ota	900mV	G 0x6 	737
+// Vint		892mV	A 0x0	655
+
+void DAC_Init()
+{
+	// Power on used DACs
+	Write_DAC(0x40, 0x1AA0);
+
+	// Enable Internal Reference
+	Write_DAC(0x90, 0X5000);
+
+	// Disable LDAC
+	Write_DAC(0x60, 0xFF00);
+
+	DAC_OFF();
+}
+
+void DAC_ON()
+{
+	// Write to DAC channels
+	Set_DAC_RST (DAC_Vol_to_Val(660));
+	Set_DAC_Y   (DAC_Vol_to_Val(1200));
+	Set_DAC_IV  (DAC_Vol_to_Val(800));
+	Set_DAC_OTA (DAC_Vol_to_Val(900));
+	Set_DAC_INT (DAC_Vol_to_Val(892));
+}
+
+void DAC_OFF()
+{
+	// Write to DAC channels
+	Write_DAC(0x32, 0x00);
+	Write_DAC(0x34, 0x00);
+	Write_DAC(0x37, 0x00);
+	Write_DAC(0x36, 0x00);
+	Write_DAC(0x30, 0x00);
+}
+
+uint16_t Get_DAC_RST()
+{
+	return Read_DAC(0x12) >> 4;
+}
+
+uint16_t Get_DAC_Y()
+{
+	return Read_DAC(0x14) >> 4;
+}
+
+uint16_t Get_DAC_IV()
+{
+	return Read_DAC(0x17) >> 4;
+}
+
+uint16_t Get_DAC_OTA()
+{
+	return Read_DAC(0x16) >> 4;
+}
+
+uint16_t Get_DAC_INT()
+{
+	return Read_DAC(0x10) >> 4;
+}
+
+void Set_DAC_RST(uint16_t val)
+{
+	Write_DAC(0x32, (val&0xFFF)<<4);
+}
+
+void Set_DAC_Y(uint16_t val)
+{
+	Write_DAC(0x34, (val&0xFFF)<<4);
+}
+
+void Set_DAC_IV(uint16_t val)
+{
+	Write_DAC(0x37, (val&0xFFF)<<4);
+}
+
+void Set_DAC_OTA(uint16_t val)
+{
+	Write_DAC(0x36, (val&0xFFF)<<4);
+}
+
+void Set_DAC_INT(uint16_t val)
+{
+	Write_DAC(0x30, (val&0xFFF)<<4);
+}
+
+// - Convert voltage (mV) to DAC code
+uint16_t DAC_Vol_to_Val(uint16_t vol)
+{
+	return vol * 4096 / 5000;
+}
+
+// - Convert DAC code to voltage (mV)
+uint16_t DAC_Val_to_Vol(uint16_t val)
+{
+	return val * 5000 / 4096 ;
+}

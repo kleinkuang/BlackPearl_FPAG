@@ -1,0 +1,335 @@
+// File:    main.c
+// Author:  Lei Kuang
+// Date:    2019.11.18
+// @ Imperial College London
+
+/* Includes ------------------------------------------------------------------*/
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+#include "i2c.h"
+#include "si5340.h"
+#include "gpio.h"
+#include "dac_adc.h"
+
+/* Private function prototypes -----------------------------------------------*/
+void Rec_cmd		();
+void Exe_cmd		();
+void Print_Error	();
+
+/* Private variables ---------------------------------------------------------*/
+uint16_t    func = 0x00;
+uint16_t    par1 = 0x00;
+uint16_t    par2 = 0x00;
+
+int main()
+{
+    init_platform();
+    GPIO_init();
+
+    Si5340_10MHz_Init();
+
+    // Biasing
+    DAC_Init();
+
+    // Reset
+    Set_GPIO_Bit(0, 1);
+    //Set_GPIO_Bit(1, 1);
+
+    // Delay
+    // - 100 -> 1
+    // - 200 -> 2
+    // - 250 -> 3
+    Set_Delay(0);
+
+    while(1)
+    {
+    	Rec_cmd();
+    	Exe_cmd();
+    }
+
+    cleanup_platform();
+    return 0;
+}
+
+/* Private  function implementations -----------------------------------------*/
+void Rec_cmd()
+{
+	unsigned char buffer[6];
+
+	for(int i=0; i<6; i++)
+		buffer[i] = inbyte();
+
+    func   = buffer[0] << 8 | buffer[1];
+    par1   = buffer[2] << 8 | buffer[3];
+    par2   = buffer[4] << 8 | buffer[5];
+}
+
+void Exe_cmd()
+{
+	uint32_t temp_u;
+
+    switch(func)
+    {
+        // ----------------------------------------------------------------
+        // - Testing
+        // - "get_version"
+        case 0x0000:    xil_printf("M: Firmware for BlackPearl\n");
+        				xil_printf("   Version: 23rd August 2020\n$%d#", 20200823);
+                        break;
+
+        case 0x0001:	temp_u = Get_GPIO();
+        				xil_printf("M: GPIO\n");
+        				xil_printf("   Mask:     0x%X\n$%d#", temp_u, temp_u);
+        				break;
+
+        case 0x1000:	Set_GPIO(par1);
+        				xil_printf("M: GPIO\n");
+        				xil_printf("   Mask:     0x%X\n$#", Get_GPIO());
+        				break;
+
+        case 0x0002:	xil_printf("M: Power ON\n");
+        				// Power ON sequence
+        				// VDD2 -> VDD1 -> AVDD
+        				Set_GPIO_Bit(4, 1);
+        				sleep(1);
+        				xil_printf("   VDD2 ON...\n");
+        				Set_GPIO_Bit(3, 1);
+        				sleep(1);
+        				xil_printf("   VDD1 ON...\n");
+        				Set_GPIO_Bit(2, 1);
+        				sleep(1);
+        				xil_printf("   AVDD ON...\n");
+        				DAC_ON();
+        				xil_printf("   DAC ON...\n");
+        				xil_printf("   Done\n$#");
+        				break;
+
+        case 0x0003:	xil_printf("M: Power OFF\n");
+        				// Power OFF sequence
+        				// AVDD -> VDD1 -> VDD2
+        				DAC_OFF();
+        				xil_printf("   DAC OFF...\n");
+        				sleep(1);
+        				Set_GPIO_Bit(2, 0);
+        				xil_printf("   AVDD OFF...\n");
+        				sleep(1);
+        				Set_GPIO_Bit(3, 0);
+        				xil_printf("   VDD1 OFF...\n");
+        				sleep(1);
+        				Set_GPIO_Bit(4, 0);
+        				xil_printf("   VDD2 OFF...\n");
+        				sleep(1);
+        				xil_printf("   Done\n$#");
+        				break;
+
+        // ----------------------------------------------------------------
+        // - I2C
+
+        // - "get_i2c_device"
+        case 0x0100:    temp_u = Get_I2C_Device();
+        				xil_printf("M: I2C\n");
+        				xil_printf("   Dev:      0x%X\n$%d#", temp_u, temp_u);
+                        break;
+
+        // - "set_i2c_device"
+        case 0x1100:    Set_I2C_Device(par1);
+                        xil_printf("M: I2C\n");
+                        xil_printf("   Dev:      0x%X\n$#", Get_I2C_Device());
+                        break;
+
+        // - "read_i2c_1"
+        case 0x1101:	temp_u = Read_I2C_1(par1);
+        				if(temp_u==0xFFFFFFFF)
+        					Print_Error();
+        				else
+        				{
+        					xil_printf("M: I2C Read\n");
+        					xil_printf("   Add:      0x%X\n", par1);
+        					xil_printf("   Val:      0x%X\n$%d#", temp_u, temp_u);
+        				}
+        				break;
+
+        // - "read_i2c_2"
+        case 0x1102:	temp_u = Read_I2C_2(par1);
+        				if(temp_u==0xFFFFFFFF)
+        					Print_Error();
+        				else
+        				{
+        					xil_printf("M: I2C Read\n");
+        					xil_printf("   Add:      0x%X\n", par1);
+        					xil_printf("   Val:      0x%X\n$%d#", temp_u, temp_u);
+        				}
+        				break;
+
+        // - "write_i2c_1"
+        case 0x2100:	temp_u = Write_I2C_1(par1, par2);
+        				if(temp_u==0xFFFFFFFF)
+        					Print_Error();
+        				else
+        				{
+        					xil_printf("M: I2C Write\n");
+        					xil_printf("   Add:      0x%X\n", par1);
+        					xil_printf("   Val:      0x%X\n$%d#", par2);
+        				}
+        				break;
+
+        // - "write_i2c_2"
+        case 0x2101:	temp_u = Write_I2C_2(par1, par2);
+        				if(temp_u==0xFFFFFFFF)
+        					Print_Error();
+        				else
+        				{
+        					xil_printf("M: I2C Write\n");
+        					xil_printf("   Add:      0x%X\n", par1);
+        					xil_printf("   Val:      0x%X\n$%d#", par2);
+        				}
+        				break;
+
+        // - "read_dac"
+        case 0x1103:	temp_u = Read_DAC(par1);
+        				if(temp_u==0xFFFFFFFF)
+        					Print_Error();
+        				else
+        				{
+        					xil_printf("M: DAC I2C\n");
+        					xil_printf("   Cmd:      0x%X\n", par1);
+        					xil_printf("   Val:      0x%X\n$%d#", temp_u);
+        				}
+        				break;
+
+        // - "write_dac"
+        case 0x2102:	temp_u = Write_DAC(par1, par2);
+        				if(temp_u==0xFFFFFFFF)
+        					Print_Error();
+        				else
+        				{
+        					xil_printf("M: DAC I2C\n");
+        					xil_printf("   Cmd:      0x%X\n", par1);
+        					xil_printf("   Val:      0x%X\n$%d#", par2);
+        				}
+        				break;
+
+        // ----------------------------------------------------------------
+        // - GPIO
+        // - "set_nrst"
+        case 0x1200:    Set_GPIO_Bit(0, par1);
+        // - "get_nrst"
+        case 0x0200:	xil_printf("M: NRST\n");
+        				xil_printf("   Val:      0x%X\n$#", Get_GPIO_Bit(0));
+        				break;
+
+        // - "set_mode"
+        case 0x1201:    Set_GPIO_Bit(1, par1);
+        // - "get_mode"
+        case 0x0201:	xil_printf("M: Mode\n");
+        				xil_printf("   Val:      0x%X\n$#", Get_GPIO_Bit(1));
+        				break;
+
+        // - "set_avdd_en"
+        case 0x1202:    Set_GPIO_Bit(2, par1);
+        // - "get_avdd_en"
+        case 0x0202:	xil_printf("M: AVDD_EN\n");
+        				xil_printf("   Val:      0x%X\n$#", Get_GPIO_Bit(2));
+        				break;
+
+        // - "get_vdd1_en"
+        case 0x0203:	xil_printf("M: VDD1_EN\n");
+        				xil_printf("   Val:      0x%X\n$#", Get_GPIO_Bit(3));
+        				break;
+
+        // - "get_vdd2_en"
+        case 0x0204:	xil_printf("M: VDD2_EN\n");
+        				xil_printf("   Val:      0x%X\n$#", Get_GPIO_Bit(4));
+        				break;
+
+        // - "get_delay"
+        case 0x0205:	xil_printf("M: Delay\n");
+                        xil_printf("   Val:      0x%X\n$#", Get_Delay());
+                        break;
+
+
+
+        				xil_printf("M: AVDD_EN\n");
+        				xil_printf("   Val:      0x%X\n$#", Get_GPIO_Bit(2));
+        				break;
+
+        // - "set_vdd1_en"
+        case 0x1203:	Set_GPIO_Bit(3, par1);
+        				xil_printf("M: VDD1_EN\n");
+        				xil_printf("   Val:      0x%X\n$#", Get_GPIO_Bit(3));
+        				break;
+
+        // - "set_vdd2_en"
+        case 0x1204:	Set_GPIO_Bit(4, par1);
+        				xil_printf("M: VDD2_EN\n");
+        				xil_printf("   Val:      0x%X\n$#", Get_GPIO_Bit(4));
+        				break;
+
+        // - "get_delay"
+        case 0x1205:    xil_printf("M: Delay\n");
+                        xil_printf("   Val:      0x%X\n$#", Get_Delay());
+                        break;
+
+        // ----------------------------------------------------------------
+        // - DAC
+        // - "set_dac_rst"
+        case 0x1300:	Set_DAC_RST(DAC_Vol_to_Val(par1));
+        // - "get_dac_rst"
+        case 0x0300:	temp_u = Get_DAC_RST();
+        				xil_printf("M: DAC Vg_rst\n");
+        				xil_printf("   Val:      %d\n", temp_u);
+        				temp_u = DAC_Val_to_Vol(temp_u);
+        				xil_printf("   Vol:      %d mV\n$%d#", temp_u, temp_u);
+        				break;
+
+        // - "set_dac_y"
+        case 0x1301:	Set_DAC_Y(DAC_Vol_to_Val(par1));
+        // - "get_dac_y"
+        case 0x0301:	temp_u = Get_DAC_Y();
+        				xil_printf("M: DAC Vy\n");
+        				xil_printf("   Val:      %d\n", temp_u);
+        				temp_u = DAC_Val_to_Vol(temp_u);
+        				xil_printf("   Vol:      %d mV\n$%d#", temp_u, temp_u);
+        				break;
+
+        // - "set_dac_iv"
+        case 0x1302:	Set_DAC_IV(DAC_Vol_to_Val(par1));
+        // - "get_dac_iv"
+        case 0x0302:	temp_u = Get_DAC_IV();
+        				xil_printf("M: DAC Vcm_IV\n");
+        				xil_printf("   Val:      %d\n", temp_u);
+        				temp_u = DAC_Val_to_Vol(temp_u);
+        				xil_printf("   Vol:      %d mV\n$%d#", temp_u, temp_u);
+        				break;
+
+        // - "set_dac_ota"
+        case 0x1303:	Set_DAC_OTA(DAC_Vol_to_Val(par1));
+        // - "get_dac_ota"
+        case 0x0303:	temp_u = Get_DAC_OTA();
+        				xil_printf("M: DAC Vcm_OTA\n");
+        				xil_printf("   Val:      %d\n", temp_u);
+        				temp_u = DAC_Val_to_Vol(temp_u);
+        				xil_printf("   Vol:      %d mV\n$%d#", temp_u, temp_u);
+        				break;
+
+        // - "set_dac_int"
+        case 0x1304:	Set_DAC_INT(DAC_Vol_to_Val(par1));
+        // - "get_dac_int"
+        case 0x0304:	temp_u = Get_DAC_INT();
+        				xil_printf("M: DAC V_integrate\n");
+        				xil_printf("   Val:      %d\n", temp_u);
+        				temp_u = DAC_Val_to_Vol(temp_u);
+        				xil_printf("   Vol:      %d mV\n$%d#", temp_u, temp_u);
+        				break;
+
+        default:		xil_printf("Function not implemented\n$#");
+    }
+}
+
+void Print_Error()
+{
+	xil_printf("M: Error!\n$#");
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Auto Detect" key="SYS_wrapper_hw_platform_0-device"/>
+	<item value="false" key="SYS_wrapper_hw_platform_0-partial_bit"/>
+	<item value="SYS_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Local" key="SYS_wrapper_hw_platform_0-target"/>
+	<item value="SYS_wrapper.mmi" key="SYS_wrapper_hw_platform_0-bmmFile"/>
+	<item value="F:\BP_PROJ\BP_RD_SYS\BP_RD_SYS.sdk\BlackPearl_MCU\Debug\BlackPearl_MCU.elf" key="SYS_wrapper_hw_platform_0-mcu_box_microblaze_0-initElf"/>
+	<item value="SYS_wrapper.bit" key="SYS_wrapper_hw_platform_0-bitFile"/>
+</section>

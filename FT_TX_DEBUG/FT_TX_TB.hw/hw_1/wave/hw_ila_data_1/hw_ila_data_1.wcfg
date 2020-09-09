@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/BP_PROJ/FT_TX_DEBUG/FT_TX_TB.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2461000fs"></ZoomStartTime>
+      <ZoomEndTime time="5691001fs"></ZoomEndTime>
+      <Cursor1Time time="3075000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="162"></NameColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/nrst" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/nrst</obj_property>
+      <obj_property name="ObjectShortName">nrst</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/ft_ready" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/ft_ready</obj_property>
+      <obj_property name="ObjectShortName">ft_ready</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/wr_en" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/wr_data" type="array">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/wr_full" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/wr_full</obj_property>
+      <obj_property name="ObjectShortName">wr_full</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/prog_full" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/prog_full</obj_property>
+      <obj_property name="ObjectShortName">prog_full</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/rd_en" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/rd_empty" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/rd_empty</obj_property>
+      <obj_property name="ObjectShortName">rd_empty</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/ft_wr_data" type="array">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/ft_wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ft_wr_data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/ft_wr_en" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/ft_wr_en</obj_property>
+      <obj_property name="ObjectShortName">ft_wr_en</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/ft_wr_ack" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/ft_wr_ack</obj_property>
+      <obj_property name="ObjectShortName">ft_wr_ack</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/trans_cnt" type="array">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/trans_cnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">trans_cnt[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/trans_end" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/trans_end</obj_property>
+      <obj_property name="ObjectShortName">trans_end</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/data_error" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/data_error</obj_property>
+      <obj_property name="ObjectShortName">data_error</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/data_debug" type="array">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/data_debug[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_debug[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/cnt_4k" type="array">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/cnt_4k[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_4k[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/ft_tx_0/inst/FT_TXE_N" type="logic">
+      <obj_property name="ElementShortName">SYS_i/ft_tx_0/inst/FT_TXE_N</obj_property>
+      <obj_property name="ObjectShortName">FT_TXE_N</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

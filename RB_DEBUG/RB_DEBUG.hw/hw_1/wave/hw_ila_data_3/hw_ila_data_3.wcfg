@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/BP_PROJ/RB_DEBUG/RB_DEBUG.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="8101fs"></ZoomEndTime>
+      <Cursor1Time time="549000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="183"></NameColumnWidth>
+      <ValueColumnWidth column_width="878"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/in_fifo_prog_empty" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/in_fifo_prog_empty</obj_property>
+      <obj_property name="ObjectShortName">in_fifo_prog_empty</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/w_rd_cnt" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/w_rd_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w_rd_cnt[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/in_fifo_rd_en" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/in_fifo_rd_en</obj_property>
+      <obj_property name="ObjectShortName">in_fifo_rd_en</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/in_fifo_rd_valid" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/in_fifo_rd_valid</obj_property>
+      <obj_property name="ObjectShortName">in_fifo_rd_valid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_wdata" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_wdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_wdata[511:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/w_wr_index" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/w_wr_index[24:0]</obj_property>
+      <obj_property name="ObjectShortName">w_wr_index[24:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/w_1k_index" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/w_1k_index[20:0]</obj_property>
+      <obj_property name="ObjectShortName">w_1k_index[20:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/w_1k_cnt" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/w_1k_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_1k_cnt[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_awvalid" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axi_awvalid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_awready" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_awready</obj_property>
+      <obj_property name="ObjectShortName">m_axi_awready</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_wlast_1" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_wlast_1</obj_property>
+      <obj_property name="ObjectShortName">m_axi_wlast_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_wlast" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_wlast</obj_property>
+      <obj_property name="ObjectShortName">m_axi_wlast</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/r_1k_avail" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/r_1k_avail</obj_property>
+      <obj_property name="ObjectShortName">r_1k_avail</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/out_fifo_prog_full" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/out_fifo_prog_full</obj_property>
+      <obj_property name="ObjectShortName">out_fifo_prog_full</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/r_1k_index" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/r_1k_index[20:0]</obj_property>
+      <obj_property name="ObjectShortName">r_1k_index[20:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/r_1k_cnt" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/r_1k_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_1k_cnt[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_arready" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">m_axi_arready</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_arvalid" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axi_arvalid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_rlast" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_rlast</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rlast</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/w_data_debug" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/w_data_debug[7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_data_debug[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/w_data_error" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/w_data_error</obj_property>
+      <obj_property name="ObjectShortName">w_data_error</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_rvalid" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rvalid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/m_axi_rdata" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/m_axi_rdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rdata[511:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/r_data_debug" type="array">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/r_data_debug[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_data_debug[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SYS_i/rb_piso_0/inst/r0/r_data_error" type="logic">
+      <obj_property name="ElementShortName">SYS_i/rb_piso_0/inst/r0/r_data_error</obj_property>
+      <obj_property name="ObjectShortName">r_data_error</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

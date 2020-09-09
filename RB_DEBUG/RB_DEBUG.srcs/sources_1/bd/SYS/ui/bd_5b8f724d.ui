@@ -1,0 +1,44 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR4 -pg 1 -lvl 3 -x 740 -y 220 -defaultsOSRD
+preplace port DDR4_CLK -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port FT601Q -pg 1 -lvl 3 -x 740 -y 60 -defaultsOSRD
+preplace port sys_ready -pg 1 -lvl 3 -x 740 -y 480 -defaultsOSRD
+preplace port sys_error -pg 1 -lvl 3 -x 740 -y 500 -defaultsOSRD
+preplace port sys_full -pg 1 -lvl 3 -x 740 -y 520 -defaultsOSRD
+preplace port in_fifo_full -pg 1 -lvl 3 -x 740 -y 380 -defaultsOSRD
+preplace port in_fifo_data_valid -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace port in_fifo_clk -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace port ft_start -pg 1 -lvl 3 -x 740 -y 100 -defaultsOSRD
+preplace portBus sys_nrst -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace portBus in_fifo_data -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD
+preplace inst rb_piso_0 -pg 1 -lvl 1 -x 180 -y 490 -defaultsOSRD
+preplace inst ddr4_0 -pg 1 -lvl 2 -x 530 -y 270 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 180 -y 300 -defaultsOSRD
+preplace inst ft_tx_0 -pg 1 -lvl 2 -x 530 -y 80 -defaultsOSRD
+preplace netloc ddr4_0_c0_ddr4_ui_clk_sync_rst 1 0 3 30 160 NJ 160 710
+preplace netloc util_vector_logic_0_Res 1 1 1 340J 280n
+preplace netloc rb_piso_0_sys_ready 1 1 2 NJ 480 NJ
+preplace netloc rb_piso_0_sys_error 1 1 2 NJ 500 NJ
+preplace netloc rb_piso_0_sys_full 1 1 2 NJ 520 NJ
+preplace netloc rb_piso_0_ddr4_rst 1 1 1 360 300n
+preplace netloc sys_nrst_1 1 0 2 20 90 NJ
+preplace netloc ddr4_0_c0_init_calib_complete 1 0 3 30 630 NJ 630 720
+preplace netloc ddr4_0_c0_ddr4_ui_clk 1 0 3 20 620 NJ 620 700
+preplace netloc rb_piso_0_in_fifo_full 1 0 3 30 360 340J 380 NJ
+preplace netloc in_fifo_data_valid_0_1 1 0 1 NJ 460
+preplace netloc in_fifo_data_0_1 1 0 1 NJ 480
+preplace netloc in_fifo_clk_0_1 1 0 1 NJ 500
+preplace netloc ft_tx_0_ft_start 1 2 1 NJ 100
+preplace netloc ft_tx_0_FT 1 2 1 NJ 60
+preplace netloc ddr4_0_C0_DDR4 1 2 1 NJ 220
+preplace netloc default_250mhz_clk2_1 1 0 2 NJ 240 NJ
+preplace netloc rb_piso_0_M_AXI 1 1 1 350 260n
+preplace netloc rb_piso_0_DATA_OUT 1 1 1 330 70n
+levelinfo -pg 1 0 180 530 740
+pagesize -pg 1 -db -bbox -sgen -170 0 860 640
+"
+}
+0

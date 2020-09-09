@@ -1,0 +1,62 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port FT601Q -pg 1 -lvl 4 -x 950 -y 250 -defaultsOSRD
+preplace port BP -pg 1 -lvl 4 -x 950 -y 480 -defaultsOSRD
+preplace port DDR4_C0 -pg 1 -lvl 4 -x 950 -y 60 -defaultsOSRD
+preplace port DDR4_CLK -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port MCU_CLK -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
+preplace port rs232_uart -pg 1 -lvl 4 -x 950 -y 640 -defaultsOSRD
+preplace port iic_rtl -pg 1 -lvl 4 -x 950 -y 660 -defaultsOSRD
+preplace port SYS_READY -pg 1 -lvl 4 -x 950 -y 140 -defaultsOSRD
+preplace port SYS_ERROR -pg 1 -lvl 4 -x 950 -y 160 -defaultsOSRD
+preplace port SYS_FULL -pg 1 -lvl 4 -x 950 -y 180 -defaultsOSRD
+preplace port MCU_RST -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
+preplace portBus SYS_RST -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
+preplace portBus CLK_LED -pg 1 -lvl 4 -x 950 -y 420 -defaultsOSRD
+preplace portBus F_AVDD_EN -pg 1 -lvl 4 -x 950 -y 740 -defaultsOSRD
+preplace portBus F_VDD1_EN -pg 1 -lvl 4 -x 950 -y 760 -defaultsOSRD
+preplace portBus F_VDD2_EN -pg 1 -lvl 4 -x 950 -y 780 -defaultsOSRD
+preplace inst clk_box -pg 1 -lvl 3 -x 770 -y 420 -defaultsOSRD
+preplace inst mcu_box -pg 1 -lvl 3 -x 770 -y 710 -defaultsOSRD
+preplace inst ddr4_box -pg 1 -lvl 3 -x 770 -y 80 -defaultsOSRD
+preplace inst rb_piso_0 -pg 1 -lvl 2 -x 460 -y 110 -defaultsOSRD
+preplace inst ft_tx_0 -pg 1 -lvl 3 -x 770 -y 270 -defaultsOSRD
+preplace inst bp_rd_0 -pg 1 -lvl 1 -x 170 -y 480 -defaultsOSRD
+preplace netloc bp_rd_0_chip_clk 1 0 3 30 370 300 490 590
+preplace netloc rb_piso_0_ddr4_rst 1 2 1 600 100n
+preplace netloc rb_piso_0_sys_ready 1 2 2 590J 150 930J
+preplace netloc rb_piso_0_sys_error 1 2 2 630J 160 NJ
+preplace netloc rb_piso_0_sys_full 1 2 2 620J 170 930J
+preplace netloc ddr4_0_c0_ddr4_ui_clk 1 1 3 330 220 620J 180 910
+preplace netloc ddr4_0_c0_init_calib_complete 1 1 3 340 240 630J 190 920
+preplace netloc clk_box_Dout_0 1 3 1 NJ 420
+preplace netloc reset_1 1 0 3 NJ 710 NJ 710 NJ
+preplace netloc SYS_RST_1 1 0 3 NJ 730 NJ 730 NJ
+preplace netloc mcu_box_F_AVDD_EN 1 3 1 NJ 740
+preplace netloc mcu_box_F_VDD1_EN 1 3 1 NJ 760
+preplace netloc mcu_box_F_VDD2_EN 1 3 1 NJ 780
+preplace netloc mcu_box_sys_nrst 1 0 4 40 380 320 340 620 490 920
+preplace netloc mcu_box_sys_mode 1 0 4 40 580 NJ 580 NJ 580 910
+preplace netloc mcu_box_sys_delay 1 0 4 30 830 NJ 830 NJ 830 910
+preplace netloc ft_tx_0_ft_start 1 0 4 20 350 NJ 350 NJ 350 910
+preplace netloc bp_rd_0_BP 1 1 3 NJ 480 NJ 480 NJ
+preplace netloc mcu_box_iic_rtl 1 3 1 NJ 660
+preplace netloc rb_piso_0_M_AXI 1 2 1 N 80
+preplace netloc mcu_box_rs232_uart 1 3 1 NJ 640
+preplace netloc ddr4_0_C0_DDR4 1 3 1 NJ 60
+preplace netloc default_250mhz_clk1_1 1 0 3 NJ 230 NJ 230 610J
+preplace netloc rb_piso_0_DATA_OUT 1 2 1 580 60n
+preplace netloc bp_rd_0_DATA_OUT 1 1 1 310 80n
+preplace netloc ft_tx_0_FT 1 3 1 NJ 250
+preplace netloc default_250mhz_clk1_2 1 0 3 NJ 690 NJ 690 NJ
+levelinfo -pg 1 0 170 460 770 950
+pagesize -pg 1 -db -bbox -sgen -150 0 1120 840
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"6",
+   "da_mb_cnt":"1"
+}

@@ -1,0 +1,28 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto b3a5ec0d29fa4dfc9cad0c7c56359ef2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot bp_rd_tb_behav xil_defaultlib.bp_rd_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/OBUFDS.v" Line 29. Module OBUFDS(SLEW="FAST") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.1/continuous/2019_05_24_2552052/data/verilog/src/unisims/OBUFDS.v" Line 29. Module OBUFDS(SLEW="FAST") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "F:/BP_PROJ/BP_RD/BP_RD.srcs/sources_1/ip/ila_bp/sim/ila_bp.v" Line 49. Module ila_bp has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "F:/BP_PROJ/BP_RD/BP_RD.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUFDS
+Compiling module unisims_ver.OBUFDS(SLEW="FAST")
+Compiling module xil_defaultlib.spi
+Compiling module xil_defaultlib.ila_bp
+Compiling module xil_defaultlib.bp_rd_default
+Compiling module xil_defaultlib.bp_rd_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot bp_rd_tb_behav

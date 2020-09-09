@@ -1,0 +1,51 @@
+$date
+        2020-Aug-25 20:20:06
+$end
+$version
+        Vivado v2019.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " SYS_i/ft_tx_0/inst/nrst $end
+$var reg 1 # SYS_i/ft_tx_0/inst/ft_ready $end
+$var reg 1 $ SYS_i/ft_tx_0/inst/wr_full $end
+$var reg 1 % SYS_i/ft_tx_0/inst/wr_en $end
+$var reg 32 & SYS_i/ft_tx_0/inst/wr_data [31:0] $end
+$var reg 1 F SYS_i/ft_tx_0/inst/prog_full $end
+$var reg 1 G SYS_i/ft_tx_0/inst/rd_en $end
+$var reg 1 H SYS_i/ft_tx_0/inst/rd_empty $end
+$var reg 1 I SYS_i/ft_tx_0/inst/rd_valid $end
+$var reg 32 J SYS_i/ft_tx_0/inst/rd_data [31:0] $end
+$var reg 16 j SYS_i/ft_tx_0/inst/trans_cnt [15:0] $end
+$var reg 1 z SYS_i/ft_tx_0/inst/ft_wr_ack $end
+$var reg 1 { SYS_i/ft_tx_0/inst/FT_TXE_N $end
+$var reg 1 | SYS_i/ft_tx_0/inst/FT_WR_N $end
+$var reg 1 } _TRIGGER $end
+$var reg 1 ~ _WINDOW $end
+$var reg 1 !" _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+1#
+1$
+0%
+b111000001100000010100000100 &
+1F
+0G
+0H
+0I
+b11000000100000000100000000 J
+b0 j
+0z
+1{
+1|
+0}
+1~
+0!"
+$end
+#512
+1}
